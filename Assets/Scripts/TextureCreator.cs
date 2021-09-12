@@ -6,7 +6,7 @@ public class TextureCreator
     string dir;
 
     public void InitPath() {
-        dir = Path.Combine(Application.streamingAssetsPath, "BoxTextures"); // Инициализируем строку, содержащую путь к папке в StreamingAssets
+        dir = Path.Combine(Application.streamingAssetsPath, "CubeTextures"); // Инициализируем строку, содержащую путь к папке в StreamingAssets
     }
 
     public Texture2D GetTexture(string neededResource) { // Функция, генерирующая текстуру на основе работы с ресурсом в StreamingAsset

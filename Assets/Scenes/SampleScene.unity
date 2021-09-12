@@ -312,9 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeExists: 0
-  startingPosition: {x: 0, y: 0, z: 0}
-  boxMaterial: {fileID: 2100000, guid: bf6649198caa6a342bac9a4120f12f3b, type: 2}
-  boxTextureName: boxTexture_3.jpg
+  startingPosition: {x: 0.5, y: 0.5}
+  cubeMaterial: {fileID: 2100000, guid: bf6649198caa6a342bac9a4120f12f3b, type: 2}
+  cubeTextureName: cubeTexture_2.jpg
   cube: {fileID: 7840484453369575251, guid: 479b905ccbdcc8344bb1f11b35c14f56, type: 3}
 --- !u!4 &473168287
 Transform:

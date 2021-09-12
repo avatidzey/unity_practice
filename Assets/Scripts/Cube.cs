@@ -2,26 +2,26 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private Vector3 rotationVector;
+    public bool imRotating = false;
     [SerializeField] private float rotationSpeed = 0.5f;
-    public bool rotating = false; // Переменная, отслеживающая состояние вращения кубика
+    [SerializeField] Vector3 rotation;
+
 
     private void Update() {
-        if (rotating) RotateCube();
+        if (imRotating) {
+            RotateCube();
+        }
     }
     public void RotateCube() { // Крутим кубик начиная с своей позиции в нужную, определяемую вектором
-        gameObject.transform.RotateAround(gameObject.transform.position, rotationVector, rotationSpeed);
-    }
-
-    public void FixCubeRotation() { // Устанавливаем положение кубика относительно камеры
-        gameObject.transform.rotation = Camera.main.transform.rotation;
+        gameObject.transform.RotateAround(gameObject.transform.position, rotation, rotationSpeed);
     }
 
     public void FixCubePosition(Vector3 position) { // Позиционирование кубика вначале
-        gameObject.transform.position.Set(position.x, position.y, position.z);
+        gameObject.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(position.x, position.y, 5f));
     }
 
     public void AddTexture(Material material) { // Определяем материал для кубика
         gameObject.GetComponent<MeshRenderer>().sharedMaterials.SetValue(material, 0);
     }
+
 }
