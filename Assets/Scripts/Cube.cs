@@ -17,7 +17,7 @@ public class Cube : MonoBehaviour
     }
 
     public void FixCubePosition(Vector3 position) { // Позиционирование кубика вначале
-        gameObject.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(position.x, position.y, 5f));
+        gameObject.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(position.x, position.y, position.z));
     }
 
     public void AddTexture(Material material) { // Определяем материал для кубика

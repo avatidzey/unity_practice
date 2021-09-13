@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class CubeCreator : MonoBehaviour
 {
-    public bool cubeExists = false;
+    private bool cubeExists = false;
     private Vector2 minCamBound, maxCamBound;
-    [SerializeField] Vector2 startingPosition;
+    [SerializeField] Vector3 startingPosition;
     [SerializeField] Material cubeMaterial;
     [SerializeField] string cubeTextureName = "cubeTexture_2.jpg";
     private TextureCreator texCreator = new TextureCreator();
@@ -12,13 +12,9 @@ public class CubeCreator : MonoBehaviour
     public void CreateCube() {
         if (!cubeExists) { // Если кубика нет, то создаем его, устанавливаем материал и определяем его положение
             cubeExists = true;
-            Instantiate(cube);
-            cube = FindObjectOfType<Cube>(); 
+            cube = Instantiate(cube);
             SetCubePosition();
             SetCubeMaterial();
-        }
-        else {
-            Debug.Log("Cube already exists!");
         }
     }
 

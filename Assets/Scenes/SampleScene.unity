@@ -311,8 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9258acdd4c10634fab6cc773b3e2aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeExists: 0
-  startingPosition: {x: 0.5, y: 0.5}
+  startingPosition: {x: 0.5, y: 0.5, z: 5}
   cubeMaterial: {fileID: 2100000, guid: bf6649198caa6a342bac9a4120f12f3b, type: 2}
   cubeTextureName: cubeTexture_2.jpg
   cube: {fileID: 7840484453369575251, guid: 479b905ccbdcc8344bb1f11b35c14f56, type: 3}
